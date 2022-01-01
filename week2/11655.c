@@ -9,7 +9,7 @@ int main() {
 	char cipher[50];
 	int shift = 13;
 
-	printf("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 	gets_s(cipher, 50);
 	encrypt(cipher, shift);
 	return 0;
@@ -22,7 +22,7 @@ void encrypt(char cipher[], int shift) {
 		if (cipher[i] >= 'A' && cipher[i] <= 'Z') {
 			cipher[i] += shift;
 			if (cipher[i] > 'Z')
-				cipher[i] -=26;//°æ°è¸¦ ³Ñ¾î°¬À¸¸é 26À» »©¼­ ¾ÕÀ¸·Î..
+				cipher[i] -=26;//ê²½ê³„ë¥¼ ë„˜ì–´ê°”ìœ¼ë©´ 26ì„ ë¹¼ì„œ ì•ìœ¼ë¡œ..
 		}
 		else if (cipher[i] >= 'a' && cipher[i] <= 'z') {
 			if (cipher[i] + shift > 127)
@@ -33,5 +33,5 @@ void encrypt(char cipher[], int shift) {
 		}
 		i++;
 	}
-	printf("¾ÏÈ£È­µÈ ¹®ÀÚ¿­: %s \n", cipher);
+	printf("ì•”í˜¸í™”ëœ ë¬¸ìì—´: %s \n", cipher);
 }
