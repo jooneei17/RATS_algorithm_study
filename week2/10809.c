@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//*** �ϼ�
+//*** ¿Ï¼º
 int main() {
 	char s[100] = { 0 };
 	int j;
