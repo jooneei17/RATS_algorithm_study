@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-//�ϼ�
+//¿Ï¼º
 int main() {
 	char string[101] = { 0 };
 	int last = 0;
