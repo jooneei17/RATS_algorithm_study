@@ -10,8 +10,8 @@ int main() {
 
 	int A, B;
 
-	sprintf(arr, "%d%d %d%d", a, b, c, d); //sprintf´Â ¼öÄ¡->¹®ÀÚ¿­
-	sscanf(arr, "%d %d", &A, &B);//sscanf´Â ¹®ÀÚ¿­->¼öÄ¡
+	sprintf(arr, "%d%d %d%d", a, b, c, d); //sprintfëŠ” ìˆ˜ì¹˜->ë¬¸ìžì—´
+	sscanf(arr, "%d %d", &A, &B);//sscanfëŠ” ë¬¸ìžì—´->ìˆ˜ì¹˜
 
 	printf("%d\n", A + B);
 
