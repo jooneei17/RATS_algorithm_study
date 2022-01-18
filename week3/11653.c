@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-//¼ÒÀÎ¼öºĞÇØ
+//Â¼Ã’Ã€ÃÂ¼Ã¶ÂºÃÃ‡Ã˜
 int main() {
 	int n;
 	scanf("%d", &n);
