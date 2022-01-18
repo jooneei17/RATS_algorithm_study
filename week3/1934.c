@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-//�ּҰ���� ���ϱ�
+//ÃÖ¼Ò°ø¹è¼ö ±¸ÇÏ±â
 
 int GCD(int a, int b);
 int LCM(int a, int b);
