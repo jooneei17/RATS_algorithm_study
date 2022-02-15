@@ -49,20 +49,20 @@ void do_BFS() {
     int nextY;
     while (isQueEmpty() == 1) {
 
-        // ´ÙÀ½ ¹æ¹®ÇÒ ³ëµå : [nextX][nextY]
+        // ë‹¤ìŒ ë°©ë¬¸í•  ë…¸ë“œ : [nextX][nextY]
         struct node k = deque();
 
         for (i = 0; i < 4; i++) {
             nextX = k.x + vectX[i];
             nextY = k.y + vectY[i];
 
-            //¹æÇâ°ª È®ÀÎ
+            //ë°©í–¥ê°’ í™•ì¸
             if (nextX >= 1 && nextX <= M && nextY >= 1 && nextY <= N) {
 
-                // [nextX][nextY]±îÁö °¡´Â ±æÀÌ ÀÖ°í ÇÑ¹øµµ ¹æ¹®ÇÏÁö ¾ÊÀº ³ëµåÀÎ °æ¿ì => queue¿¡ ³Ö´Â´Ù.
+                // [nextX][nextY]ê¹Œì§€ ê°€ëŠ” ê¸¸ì´ ìˆê³  í•œë²ˆë„ ë°©ë¬¸í•˜ì§€ ì•Šì€ ë…¸ë“œì¸ ê²½ìš° => queueì— ë„£ëŠ”ë‹¤.
                 if (map[nextX][nextY] == 1) {
                     if (visit[nextX][nextY] == 0) {
-                        //[x][y] ¿¡¼­ [nextX][nextY]±îÁö °¡´Âµ¥ °É¸®´Â ³ëµå °³¼ö
+                        //[x][y] ì—ì„œ [nextX][nextY]ê¹Œì§€ ê°€ëŠ”ë° ê±¸ë¦¬ëŠ” ë…¸ë“œ ê°œìˆ˜
                         visit[nextX][nextY] = visit[k.x][k.y] + 1;
                         enque(nextX, nextY);
                     }
