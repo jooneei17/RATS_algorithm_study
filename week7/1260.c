@@ -6,12 +6,12 @@ int metrix[MAX][MAX];
 int visited[MAX * MAX];
 
 void DFS(int v, int N) {
-	printf("%d ", v);// Á¤Á¡ Ãâ·Â
+	printf("%d ", v);// ì •ì  ì¶œë ¥
 
-	visited[v] = 1;// ¹æ¹® Ç¥½Ã
+	visited[v] = 1;// ë°©ë¬¸ í‘œì‹œ
 
-	for (int d = 1; d <= N; d++) {// ÀÎÁ¢ Á¤Á¡ Ã¼Å©
-		if (!visited[d] && metrix[v][d]) {//¹æ¹® ¾ÈÇß°í && ÀÌµ¿ °¡´ÉÇÏ¸é
+	for (int d = 1; d <= N; d++) {// ì¸ì ‘ ì •ì  ì²´í¬
+		if (!visited[d] && metrix[v][d]) {//ë°©ë¬¸ ì•ˆí–ˆê³  && ì´ë™ ê°€ëŠ¥í•˜ë©´
 			DFS(d, N);
 		}
 	}
@@ -22,19 +22,19 @@ int queue[MAX * MAX] = { 0 };
 void BFS(int v, int N) {
 	int front = -1, rear = -1;
 
-	rear++;// Ã¹¹øÀç Ãß°¡
+	rear++;// ì²«ë²ˆì¬ ì¶”ê°€
 	queue[rear] = v;
 
-	visited[v] = 1;// ¹æ¹® Ç¥½Ã
+	visited[v] = 1;// ë°©ë¬¸ í‘œì‹œ
 
 	printf("%d ", v);
 
-	while (front < rear) {// ³Êºñ ¿ì¼± Å½»ö
-		front++;// Å¥¿¡¼­ ²¨³»±â
+	while (front < rear) {// ë„ˆë¹„ ìš°ì„  íƒìƒ‰
+		front++;// íì—ì„œ êº¼ë‚´ê¸°
 		int nextV = queue[front];
 
-		for (int d = 1; d <= N; d++) {//ÀÎÁ¢ Á¤Á¡ Ã¼Å©
-			if (!visited[d] && metrix[nextV][d]) {// ¹æ¹® ¾ÈÇß°í && ÀÌµ¿ °¡´ÉÇÏ¸é
+		for (int d = 1; d <= N; d++) {//ì¸ì ‘ ì •ì  ì²´í¬
+			if (!visited[d] && metrix[nextV][d]) {// ë°©ë¬¸ ì•ˆí–ˆê³  && ì´ë™ ê°€ëŠ¥í•˜ë©´
 				rear++;
 				visited[d] = 1;
 				queue[rear] = d;
